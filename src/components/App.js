@@ -25,13 +25,13 @@ class App extends Component {
   }
 
   handleKeyDown(event) {
-    if (event.key === "ArrowRight") {
-      this.setState((prevState) => ({
-        ballPosition: {
-          left: parseInt(prevState.ballPosition.left) + 5 + "px"
-        }
-      }));
-    }
+    if (event.keyCode === 39 || event.key === "ArrowRight") { // Check if the keyCode is for the Right Arrow key
+        this.setState((prevState) => ({
+          ballPosition: {
+            left: parseInt(prevState.ballPosition.left) + 5 + "px"
+          }
+        }));
+      }
   }
 
   renderBallOrButton() {
